@@ -1,0 +1,573 @@
+﻿@{
+    ViewBag.Title = "Mohammad Akib Hasan | Portfolio";
+    Layout = "~/Views/Shared/_CustomLayout.cshtml";
+}
+
+<section id="home-section" class="hero">
+    <div class="home-slider owl-carousel">
+        <div class="slider-item">
+            <div class="overlay"></div>
+            <div class="container-fluid px-md-0">
+                <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+                    <div class="one-third order-md-last img" style="background-image:url(../../Content/images/bg_1.jpg);">
+                        <div class="overlay"></div>
+                        <div class="overlay-1"></div>
+                    </div>
+                    <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                        <div class="text">
+                            <span class="subheading">Hello! This is Akib!</span>
+                            <h1 class="mb-4 mt-3">Full Stack<span>Web</span> Developer &amp; Software Engineer</h1>
+                            <p><a href="#" class="btn btn-primary">Hire me</a> <a href="#" class="btn btn-primary btn-outline-primary">Download CV</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-item">
+            <div class="overlay"></div>
+            <div class="container-fluid px-md-0">
+                <div class="row d-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+                    <div class="one-third order-md-last img" style="background-image:url(../../Content/images/bg_2.jpg);">
+                        <div class="overlay"></div>
+                        <div class="overlay-1"></div>
+                    </div>
+                    <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                        <div class="text">
+                            <span class="subheading">I think &amp; Execute</span>
+                            <h1 class="mb-4 mt-3">Hi, I am <span>Akib</span> This is my favorite work.</h1>
+                            <p><a href="#" class="btn btn-primary">Hire me</a> <a href="#" class="btn btn-primary btn-outline-primary">Download CV</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-counter img bg-light" id="section-counter">
+    <div class="container">
+        <div class="row">
+            @foreach (var item in ViewBag.clients)
+            {
+                <div class="col-md-3 justify-content-center counter-wrap ftco-animate">
+                    <div class="block-18 d-flex">
+                        <div class="icon d-flex justify-content-center align-items-center">
+                            <span class="@item.ImageUrl"></span>
+                        </div>
+                        <div class="text">
+                            <strong class="number" data-number="@item.Count">0</strong>
+                            <span>@item.Title</span>
+                        </div>
+                    </div>
+                </div>
+
+            }
+
+            </div>
+    </div>
+</section>
+
+<section class="ftco-about ftco-section ftco-no-pt ftco-no-pb" id="about-section">
+    <div class="container">
+        <div class="row d-flex no-gutters">
+            <div class="col-md-6 col-lg-5 d-flex">
+                <div class="img-about img d-flex align-items-stretch">
+                    <div class="overlay"></div>
+                    <div class="img d-flex align-self-stretch align-items-center" style="background-image:url(../../Content/images/about-1.jpg);">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-7 pl-md-4 pl-lg-5 py-5">
+                <div class="py-md-5">
+                    <div class="row justify-content-start pb-3">
+                        @foreach (var item in ViewBag.aboutme)
+                        {
+                            <div class="col-md-12 heading-section ftco-animate">
+                                <span class="subheading">My Intro</span>
+                                <h2 class="mb-4" style="font-size: 34px; text-transform: capitalize;">@item.Title</h2>
+
+
+                                <p>@item.Description</p>
+
+                                <ul class="about-info mt-4 px-md-0 px-2">
+                                    <li class="d-flex"><span>Name:</span> <span>@item.Name</span></li>
+                                    <li class="d-flex"><span>Date of birth:</span> <span>July 31, 1998</span></li>
+                                    <li class="d-flex"><span>Address:</span> <span>@item.Address</span></li>
+                                    <li class="d-flex"><span>Zip code:</span> <span>@item.ZipCode</span></li>
+                                    <li class="d-flex"><span>Email:</span> <span>@item.Email</span></li>
+                                    <li class="d-flex"><span>Phone: </span> <span>@item.Phone</span></li>
+                                </ul>
+                            </div>
+                        }
+
+                            <div class="col-md-12">
+                                <div class="my-interest d-lg-flex w-100">
+                                    <div class="interest-wrap d-flex align-items-center">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <span class="flaticon-listening"></span>
+                                        </div>
+                                        <div class="text">Music</div>
+                                    </div>
+                                    <div class="interest-wrap d-flex align-items-center">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <span class="flaticon-suitcases"></span>
+                                        </div>
+                                        <div class="text">Travel</div>
+                                    </div>
+                                    <div class="interest-wrap d-flex align-items-center">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <span class="flaticon-video-player"></span>
+                                        </div>
+                                        <div class="text">Movie</div>
+                                    </div>
+                                    <div class="interest-wrap d-flex align-items-center">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <span class="flaticon-football"></span>
+                                        </div>
+                                        <div class="text">Sports</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section bg-light" id="skills-section">
+    <div class="container">
+        <div class="row justify-content-center pb-5">
+            <div class="col-md-12 heading-section text-center ftco-animate">
+                <span class="subheading">Skills</span>
+                <h2 class="mb-4">My Skills</h2>
+                @*<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>*@
+            </div>
+        </div>
+        <div class="row progress-circle mb-5">
+            @foreach (var item in ViewBag.skills)
+            {
+                <div class="col-lg-4 mb-4">
+                    <div class="bg-white rounded-lg shadow p-4">
+                        <h2 class="h5 font-weight-bold text-center mb-4">@item.Title</h2>
+
+                        <!-- Progress bar 1 -->
+                        <div class="progress mx-auto" data-value='@item.Percentage'>
+                            <span class="progress-left">
+                                <span class="progress-bar border-primary"></span>
+                            </span>
+                            <span class="progress-right">
+                                <span class="progress-bar border-primary"></span>
+                            </span>
+                            <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                                <div class="h2 font-weight-bold">@item.Percentage<sup class="small">%</sup></div>
+                            </div>
+                        </div>
+                        <!-- END -->
+                        <!-- Demo info -->
+                        <div class="row text-center mt-4">
+                            <div class="col-6 border-right">
+                                <div class="h4 font-weight-bold mb-0">28%</div><span class="small text-gray">Last week</span>
+                            </div>
+                            <div class="col-6">
+                                <div class="h4 font-weight-bold mb-0">60%</div><span class="small text-gray">Last month</span>
+                            </div>
+                        </div>
+                        <!-- END -->
+                    </div>
+                </div>
+            }
+    
+            </div>
+    </div>
+</section>
+
+<section class="ftco-section" id="services-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 heading-section text-center ftco-animate mb-5">
+                <span class="subheading">I am great at</span>
+                <h2 class="mb-4">I do awesome services for my clients</h2>
+                @*<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>*@
+            </div>
+        </div>
+
+        <div class="row">
+
+            @foreach (var item in ViewBag.services)
+            {
+                <div class="col-md-6 col-lg-3">
+                    <div class="media block-6 services d-block bg-white rounded-lg shadow ftco-animate">
+                        <div class="icon d-flex align-items-center justify-content-center"><span class="@item.ImageUrl"></span></div>
+                        <div class="media-body">
+                            <h3 class="heading mb-3">@item.Title</h3>
+                            <p style="min-height:200px;">@item.Description</p>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            </div>
+
+        
+    </div>
+</section>
+
+<section class="ftco-hireme">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-md-8 col-lg-8 d-flex align-items-center">
+                <div class="w-100 py-4">
+                    <h2>Have a project on your mind.</h2>
+                    @*<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly.</p>*@
+                    <p class="mb-0"><a href="#" class="btn btn-white py-3 px-4">Contact me</a></p>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 d-flex align-items-end">
+                <img src="~/Content/images/author.png" class="img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section ftco-project" id="projects-section">
+    <div class="container-fluid px-md-4">
+        <div class="row justify-content-center pb-5">
+            <div class="col-md-12 heading-section text-center ftco-animate">
+                <span class="subheading">Accomplishments</span>
+                <h2 class="mb-4">My Projects</h2>
+                @*<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>*@
+            </div>
+        </div>
+        <div class="row">
+
+            @foreach (var item in ViewBag.projects)
+            {
+                <div class="col-md-3">
+                    <div class="project img shadow ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(../../Content/images/@item.ImageUrl);">
+                        <div class="overlay"></div>
+                        <div class="text text-center p-4">
+                            <h3><a href="#">@item.Heading</a></h3>
+                            <span>@item.Title</span>
+                        </div>
+                    </div>
+                </div>
+
+            }
+
+            </div>
+    </div>
+</section>
+
+<section class="ftco-section testimony-section bg-primary">
+    <div class="container">
+        <div class="row justify-content-center pb-5">
+            <div class="col-md-12 heading-section heading-section-white text-center ftco-animate">
+                <span class="subheading">Testimonies</span>
+                <h2 class="mb-4">What client says about?</h2>
+                @*<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>*@
+            </div>
+        </div>
+        <div class="row ftco-animate">
+            <div class="col-md-12">
+                <div class="carousel-testimony owl-carousel">
+
+                    @foreach (var item in ViewBag.reviews)
+                    {
+                        <div class="item">
+                            <div class="testimony-wrap py-4">
+                                <div class="text">
+                                    <span class="fa fa-quote-left"></span>
+                                    <p class="mb-4 pl-5">@item.Review1</p>
+                                    <div class="d-flex align-items-center">
+                                        <div class="user-img" style="background-image: url(../../Content/images/@item.ImageUrl)"></div>
+                                        <div class="pl-3">
+                                            <p class="name">@item.Name</p>
+                                            <span class="position">@item.Designation</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                        <div class="item">
+                            <div class="testimony-wrap py-4">
+                                <div class="text">
+                                    <span class="fa fa-quote-left"></span>
+                                    <p class="mb-4 pl-5">Awesome!</p>
+                                    <div class="d-flex align-items-center">
+                                        <div class="user-img" style="background-image: url(../../Content/images/person_1.jpg)"></div>
+                                        <div class="pl-3">
+                                            <p class="name">Roger Scott</p>
+                                            <span class="position">Marketing Manager</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimony-wrap py-4">
+                                <div class="text">
+                                    <span class="fa fa-quote-left"></span>
+                                    <p class="mb-4 pl-5">Great Service!</p>
+                                    <div class="d-flex align-items-center">
+                                        <div class="user-img" style="background-image: url(../../Content/images/person_2.jpg)"></div>
+                                        <div class="pl-3">
+                                            <p class="name">Roger Scott</p>
+                                            <span class="position">Marketing Manager</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimony-wrap py-4">
+                                <div class="text">
+                                    <span class="fa fa-quote-left"></span>
+                                    <p class="mb-4 pl-5">Super fast deliver!</p>
+                                    <div class="d-flex align-items-center">
+                                        <div class="user-img" style="background-image: url(../../Content/images/person_3.jpg)"></div>
+                                        <div class="pl-3">
+                                            <p class="name">Roger Scott</p>
+                                            <span class="position">Marketing Manager</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimony-wrap py-4">
+                                <div class="text">
+                                    <span class="fa fa-quote-left"></span>
+                                    <p class="mb-4 pl-5">Cheers!</p>
+                                    <div class="d-flex align-items-center">
+                                        <div class="user-img" style="background-image: url(../../Content/images/person_1.jpg)"></div>
+                                        <div class="pl-3">
+                                            <p class="name">Roger Scott</p>
+                                            <span class="position">Marketing Manager</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimony-wrap py-4">
+                                <div class="text">
+                                    <span class="fa fa-quote-left"></span>
+                                    <p class="mb-4 pl-5">Mind blowing!</p>
+                                    <div class="d-flex align-items-center">
+                                        <div class="user-img" style="background-image: url(../../Content/images/person_2.jpg)"></div>
+                                        <div class="pl-3">
+                                            <p class="name">Roger Scott</p>
+                                            <span class="position">Marketing Manager</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="ftco-section bg-light" id="blog-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+            <div class="col-md-7 heading-section text-center ftco-animate">
+                <span class="subheading">Blog</span>
+                <h2 class="mb-4">My Blog</h2>
+                @*<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>*@
+            </div>
+        </div>
+        <div class="row d-flex">
+
+            @foreach (var item in ViewBag.blogs)
+            {
+                <div class="col-md-4 d-flex ftco-animate">
+                    <div class="blog-entry justify-content-end">
+                        <a href="single.html" class="block-20" style="background-image: url('../../Content/images/@item.ImageUrl');">
+                        </a>
+                        <div class="text mt-3 float-right d-block">
+                            <div class="d-flex align-items-center mb-3 meta">
+                                <p class="mb-0">
+                                    <span class="mr-2">@item.Date</span>
+                                    <a href="#" class="mr-2">@item.AuthorName</a>
+                                    <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+                                </p>
+                            </div>
+                            <h3 class="heading"><a href="single.html">@item.Title</a></h3>
+                            <p>@item.Description</p>
+                        </div>
+                    </div>
+                </div>
+            }
+
+               
+            </div>
+    </div>
+</section>
+
+<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-7 heading-section text-center ftco-animate">
+                <span class="subheading">Contact us</span>
+                <h2 class="mb-4">Have a Project?</h2>
+                @*<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>*@
+            </div>
+        </div>
+
+        <div class="row block-9">
+            <div class="col-md-8">
+                <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xpzklbja" method="post" class="bg-light p-4 p-md-5 contact-form">
+                    
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="full-name">Full Name</label>
+                                    <input type="text" id="full-name" class="form-control" placeholder="Your Name">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="email-address">Email Address</label>
+                                    <input type="email" id="email-address" class="form-control" placeholder="Your Email">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="telephone">Phone Number (Optional)</label>
+                                    <input type="text" id="telephone" class="form-control" placeholder="0153-1439-546">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="complaint">Complaint</label>
+                                    <textarea name="complaint" id="complaint" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+                                </div>
+                            </div>
+                   
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+                        </div>
+                    </div>
+                    </div>
+                </form>
+
+
+
+
+
+
+                @*@model MyPortfolio.Models.ContactU
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label " })
+                <div class="col-md-12">
+                    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label " })
+                <div class="col-md-12">
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Subject, htmlAttributes: new { @class = "control-label " })
+                <div class="col-md-12">
+                    @Html.EditorFor(model => model.Subject, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Subject, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Message, htmlAttributes: new { @class = "control-label " })
+                <div class="col-md-12">
+                    @Html.EditorFor(model => model.Message, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-primary py-3 px-5" />
+                </div>
+            </div>
+
+
+        }*@
+
+
+
+
+
+
+
+
+            </div>
+
+            <div class="col-md-4 d-flex pl-md-5">
+                <div class="row">
+                    @foreach (var item in ViewBag.aboutme)
+                    {
+                        <div class="dbox w-100 d-flex">
+                            <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="fa fa-map-marker"></span>
+                            </div>
+
+                            <div class="text">
+                                <p><span>Address:</span> @item.Address</p>
+                            </div>
+                        </div>
+                        <div class="dbox w-100 d-flex">
+                            <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="fa fa-phone"></span>
+                            </div>
+                            <div class="text">
+                                <p><span>Phone:</span> <a href="tel://@item.Phone">@item.Phone</a></p>
+                            </div>
+                        </div>
+                        <div class="dbox w-100 d-flex">
+                            <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="fa fa-paper-plane"></span>
+                            </div>
+                            <div class="text">
+                                <p><span>Email:</span> <a href="mailto:@item.Email">@item.Email</a></p>
+                            </div>
+                        </div>
+                        <div class="dbox w-100 d-flex">
+                            <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="fa fa-globe"></span>
+                            </div>
+                            <div class="text">
+                                <p><span>Website</span> <a href="@item.Website">@item.Website</a></p>
+                            </div>
+                        </div>
+
+                    }
+
+                </div>
+                <!-- <div id="map" class="map"></div> -->
+            </div>
+        </div>
+    </div>
+</section>

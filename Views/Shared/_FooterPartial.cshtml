@@ -1,0 +1,72 @@
+﻿<footer class="ftco-footer ftco-section">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Lets talk about</h2>
+                    <p>Web development is the work involved in developing a website for the Internet (World Wide Web) or an intranet (a private network)</p>
+                    <p><a href="#" class="btn btn-primary">Learn more</a></p>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4 ml-md-4">
+                    <h2 class="ftco-heading-2">Links</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Home</a></li>
+                        <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>About</a></li>
+                        <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Services</a></li>
+                        <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Projects</a></li>
+                        <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Contact</a></li>
+                        <li>@Html.ActionLink("Admin Panel", "Login", "Account", new { area = "" }, new { @class = "fa fa-chevron-right mr-2" })</li>
+</ul>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Services</h2>
+
+                    @foreach (var item in ViewBag.services)
+                    {
+                <ul class="list-unstyled">
+                    <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>@item.Title</a></li>
+                </ul>
+                }
+
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Have a Questions?</h2>
+                    <div class="block-23 mb-3">
+
+                        @foreach (var item in ViewBag.aboutme)
+                        {
+                    <ul>
+                        <li><span class="icon fa fa-map marker"></span><span class="text">@item.Address</span></li>
+                        <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">@item.Phone</span></a></li>
+                        <li><a href="mailto:@item.Email"><span class="icon fa fa-paper-plane pr-4"></span><span class="text">@item.Email</span></a></li>
+                    </ul>
+                        }
+
+                                </div>
+                    <ul class="ftco-footer-social list-unstyled mt-2">
+                        <li class="ftco-animate"><a href="https://www.twitter.com/filmsbyakib"><span class="fa fa-twitter"></span></a></li>
+                        <li class="ftco-animate"><a href="https://www.facebook.com/filmsbyakib"><span class="fa fa-facebook"></span></a></li>
+                        <li class="ftco-animate"><a href="https://www.instagram.com/filmsbyakib"><span class="fa fa-instagram"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+
+                <p>
+                   
+                    Copyright &copy;
+                    <script>document.write(new Date().getFullYear());</script> All rights reserved | Develped By <i class="fa fa-code" aria-hidden="true"></i> by <a href="" target="_blank">Mohammad Akib Hasan</a>
+                   
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
